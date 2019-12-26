@@ -1,10 +1,10 @@
 int* sortedSquares(int* A, int ASize, int* returnSize){
-    int i = 0 ;
+int i = 0 ;
 int k = ASize-1;
 int j=ASize-1;
 int *result = (int*)malloc(sizeof(int)*ASize);
 while(i<=j){
-    if(abs(A[i])<abs(A[j])){
+    if(A[i]*A[i]<A[j]*A[j]){
        result[k--] = A[j]*A[j];
        j--;
       } else{
